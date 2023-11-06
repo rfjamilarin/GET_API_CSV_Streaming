@@ -47,12 +47,7 @@ def get_transaction_summary_by_product(parameter):
         transaction_span_datetime = currDatetime - timedelta(days=parameter)
 
         transactions_by_product = filter_schema_by_products(currDatetime,transaction_span_datetime)
-        filtered_data = {"summary": transactions_by_product}
-
-        if not filtered_data:
-            return jsonify({'error': 'Summary not found'}), 404
-
-        response_data = filtered_data
+        response_data = {"summary": transactions_by_product}
 
     return jsonify(response_data)
 
@@ -70,12 +65,7 @@ def get_transaction_summary_by_city(parameter):
         transaction_span_datetime = currDatetime - timedelta(days=parameter)
 
         transactions_by_city = filter_schema_by_city(currDatetime,transaction_span_datetime)
-        filtered_data = {"summary": transactions_by_city}
-
-        if not filtered_data:
-            return jsonify({'error': 'Summary not found'}), 404
-
-        response_data = filtered_data
+        response_data = {"summary": transactions_by_city}
 
     return jsonify(response_data)
 
