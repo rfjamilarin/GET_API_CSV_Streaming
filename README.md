@@ -16,7 +16,9 @@ Assumptions:
     - For the following API endpoints:
         http://localhost:8080/assignment/transactionSummaryByProducts/{last_n_days}
         http://localhost:8080/assignment/transactionSummaryByManufacturingCity/{last_n_days}
-      Instead of receiving the summary of transactions from the last 10 days, the calls will receive the summary of transactions from the last n days, where n = {last_n_days}, and n is a positive integer. The value of {last_n_days} will be provided as input on the client side.
+      Instead of receiving the summary of transactions from the last 10 days, the calls will receive the summary of transactions from the last n days, where n = {last_n_days}, and       n is a positive integer. The value of {last_n_days} will be provided as input on the client side.
+
+      For example, for 'Transaction_20181001101010.csv' & {last_n_days} = 10, all CSV files before will be retrieved until 'Transaction_20180921101010.csv'                               ('Transaction_20180921101010.csv' included).
     
 4. Date Format Consistency:
     - The 'transactionDatetime' in each transaction information and the <datetime> in 'Transaction_<datetime>.csv' follow the same format: %Y%m%d%H%M%S.
