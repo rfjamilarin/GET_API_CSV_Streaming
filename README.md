@@ -20,7 +20,7 @@ Assumptions:
     
 4. Date Format Consistency:
     - The 'transactionDatetime' in each transaction information and the <datetime> in 'Transaction_<datetime>.csv' follow the same       format: %Y%m%d%H%M%S.
-      Note: With this assumption, 'Transaction_20180101101010.csv' is renamed to 'Transaction_20181001101010.csv' (change in             month).
+      Note: With this assumption, 'Transaction_20180101101010.csv' is renamed to 'Transaction_20181001101010.csv' (change in             month). A new CSV file 'Transaction_20180920101010.csv' is also artificially generated.
 
 Key Design Concepts:
 
